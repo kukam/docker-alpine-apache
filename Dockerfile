@@ -2,7 +2,6 @@ FROM alpine:latest
 
 MAINTAINER kukam "kukam@freebox.cz"
 
-# Install base packages
 RUN apk --update --no-cache add bash apache2 \
     && mkdir -p /PWE/webapps/myproject \
     && sed -i 's/^#ServerName.*/ServerName apache/' /etc/apache2/httpd.conf \
